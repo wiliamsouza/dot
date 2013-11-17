@@ -1,0 +1,15 @@
+hardstatus alwayslastline "%{wK} %?%-Lw%?%{kw}%n%f %t%{wK}%?%+Lw %=%M/%d %c"
+bindkey ^[. prev
+bindkey ^[; next
+defscrollback 2500
+
+startup_message off
+
+setenv TERM=screen
+
+screen -t root
+screen -t devel
+screen -t source 
+#screen -t loislane ssh wiliamsouza@loislane
+#screen -t maryjane ssh wiliamsouza@maryjane
+screen -t
