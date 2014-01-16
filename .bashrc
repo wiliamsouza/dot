@@ -10,7 +10,7 @@ PATH=$ANDROID_HOME/tools:$PATH
 PYTHONSTARTUP=$HOME/.pythonrc.py
 
 # Java
-JAVA_HOME=/usr/lib/jvm/jdk1.7.0_45
+JAVA_HOME=/usr/lib/jvm/jdk1.6.0_45
 
 # Maven
 M2_HOME=$HOME/bin/apache-maven
@@ -40,6 +40,10 @@ PATH=$HOME/bin/eclipse:$PATH
 # Bash
 PROMPT_DIRTRIM=1
 
+# PYENV
+PYENV_ROOT=$HOME/.pyenv
+PATH=$PYENV_ROOT/bin:$PATH
+
 export M2
 export M2_HOME
 export GRADLE_HOME
@@ -54,4 +58,5 @@ export ANT_HOME
 export JAVA_HOME
 export PROMPT_DIRTRIM
 export USE_CCACHE
+export PYENV_ROOT
 export PATH
