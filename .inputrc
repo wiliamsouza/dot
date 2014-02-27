@@ -1,0 +1,6 @@
+set editing-mode vi
+set keymap vi-insert
+
+$if Bash
+    "\C-l": "\e\C-la"
+$endif
