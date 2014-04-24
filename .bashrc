@@ -1,8 +1,23 @@
+# set PATH so it includes user's private bin if it exists
+if [ -d "$HOME/bin" ] ; then
+    PATH="$HOME/bin:$PATH"
+fi
+
+# set PATH so it includes user's private bin if it exists
+if [ -d "$HOME/.local/bin" ] ; then
+    PATH="$HOME/.local/bin:$PATH"
+fi
+
+# Editor
+EDITOR='vim'
+
+# powerline
+##. $HOME/.local/lib/python2.7/site-packages/powerline/bindings/bash/powerline.sh
+
 #Virtualenv
-# pip install virtualenvwrapper
-source /usr/local/bin/virtualenvwrapper.sh
-PROJECT_HOME=$HOME/devel
-WORKON_HOME=$HOME/devel
+#source /usr/local/bin/virtualenvwrapper.sh
+#PROJECT_HOME=$HOME/devel
+#WORKON_HOME=$HOME/devel
 
 # Android
 ANDROID_HOME=$HOME/bin/android-sdk-linux
@@ -46,9 +61,14 @@ PATH=$HOME/bin/eclipse:$PATH
 PROMPT_DIRTRIM=1
 
 # PYENV
-#PYENV_ROOT=$HOME/.pyenv
-#PATH=$PYENV_ROOT/bin:$PATH
-#eval "$(pyenv init -)"
+PYENV_ROOT=$HOME/.pyenv
+PATH=$PYENV_ROOT/bin:$PATH
+eval "$(pyenv init -)"
+
+# RBENV
+RBENV_ROOT=$HOME/.rbenv
+PATH=$RBENV_ROOT/bin:$PATH
+eval "$(rbenv init -)"
 
 # Nodejs
 PATH=$HOME/bin/node/bin:$PATH
@@ -56,9 +76,6 @@ PATH=$HOME/bin/node/bin:$PATH
 # Plan9port
 ##PLAN9=$HOME/source/plan9
 ##PATH=$PLAN9/bin:$PATH
-
-# Alias
-alias gst="git status"
 
 export M2
 export M2_HOME
@@ -75,8 +92,7 @@ export JAVA_HOME
 export PROMPT_DIRTRIM
 export USE_CCACHE
 export PYENV_ROOT
+export RBENV_ROOT
 export PLAN9
 export PATH
-
-### Added by the Heroku Toolbelt
-export PATH="/usr/local/heroku/bin:$PATH"
+export EDITOR
