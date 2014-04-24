@@ -1,0 +1,17 @@
+#!/bin/bash
+
+tmux new-session -s waa -n root -d
+
+tmux new-window -t waa:1 -n devel -c ~/devel
+tmux split-window -t devel -h -l 80 -c ~/devel
+tmux split-window -t devel -v -c ~/devel
+tmux select-pane -t devel -L
+tmux split-window -t devel -v -c ~/devel -p 20
+tmux select-pane -t devel -U
+
+tmux new-window -t waa:2 -n source -c ~/source
+tmux new-window -t waa:3 -n ssh
+tmux new-window -t waa:4 -n log -c /var/log 
+tmux new-window -t waa:5 -n bash 
+tmux select-window -t waa:1
+tmux attach-session -t waa
