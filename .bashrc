@@ -15,9 +15,13 @@ EDITOR='vim'
 ##. $HOME/.local/lib/python2.7/site-packages/powerline/bindings/bash/powerline.sh
 
 #Virtualenv
+# pip install virtualenvwrapper
 #source /usr/local/bin/virtualenvwrapper.sh
-#PROJECT_HOME=$HOME/devel
-#WORKON_HOME=$HOME/devel
+# apt-get install virtualenvwrapper
+# source /usr/share/virtualenvwrapper/virtualenvwrapper.sh
+PROJECT_HOME=$HOME/devel
+WORKON_HOME=$HOME/.virtualenvs
+source /usr/share/virtualenvwrapper/virtualenvwrapper.sh
 
 # Android
 ANDROID_HOME=$HOME/bin/android-sdk-linux
