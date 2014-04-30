@@ -40,3 +40,6 @@ autocmd FileType go autocmd BufWritePre <buffer> Fmt
 " Enable golint
 set rtp+=$GOPATH/src/github.com/golang/lint/misc/vim
 autocmd BufWritePost,FileWritePost *.go execute 'Lint' | cwindow
+
+" Disable markdown folding
+let g:vim_markdown_folding_disabled=1
