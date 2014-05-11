@@ -3,7 +3,7 @@ if [ -d "$HOME/bin" ] ; then
     PATH="$HOME/bin:$PATH"
 fi
 
-# set PATH so it includes user's private bin if it exists
+# set PATH so it includes user's .local private bin if it exists
 if [ -d "$HOME/.local/bin" ] ; then
     PATH="$HOME/.local/bin:$PATH"
 fi
@@ -16,12 +16,13 @@ EDITOR='vim'
 
 #Virtualenv
 # pip install virtualenvwrapper
-#source /usr/local/bin/virtualenvwrapper.sh
+#source /usr/share/virtualenvwrapper/virtualenvwrapper.sh
 # apt-get install virtualenvwrapper
-# source /usr/share/virtualenvwrapper/virtualenvwrapper.sh
+#source /usr/local/bin/virtualenvwrapper.sh
 PROJECT_HOME=$HOME/devel
 WORKON_HOME=$HOME/.virtualenvs
-source /usr/share/virtualenvwrapper/virtualenvwrapper.sh
+# pip install --user virtualenvwrapper
+source $HOME/.local/bin/virtualenvwrapper.sh
 
 # Android
 ANDROID_HOME=$HOME/bin/android-sdk-linux
@@ -32,8 +33,8 @@ PATH=$ANDROID_HOME/tools:$PATH
 PYTHONSTARTUP=$HOME/.pythonrc.py
 
 # Java
-#JAVA_HOME=/usr/lib/jvm/jdk1.6.0_45
-JAVA_HOME=/usr/lib/jvm/jdk1.7.0_51
+#JAVA_HOME=/usr/lib/jvm/jdk1.6.0_55
+JAVA_HOME=/usr/lib/jvm/jdk1.8.0_05
 
 # Maven
 M2_HOME=$HOME/bin/apache-maven
@@ -80,6 +81,9 @@ PATH=$HOME/bin/node/bin:$PATH
 # Plan9port
 ##PLAN9=$HOME/source/plan9
 ##PATH=$PLAN9/bin:$PATH
+
+# Github atom-shell
+PATH=$HOME/bin/atom-shell:$PATH
 
 export M2
 export M2_HOME
