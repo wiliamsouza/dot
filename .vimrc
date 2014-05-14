@@ -50,3 +50,12 @@ au BufReadPost * if line("'\"") > 0|if line("'\"") <= line("$")|exe("norm '\"")|
 " Highlight end of line whitespace.
 highlight WhitespaceEOL ctermbg=red guibg=red
 match WhitespaceEOL /\s\+$/
+
+" Wrapping and tabs.
+set tw=78 ts=4 sw=4 sta et sts=4 ai
+
+" More syntax highlighting.
+let python_highlight_all = 1
+
+" " Smart indenting
+set smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class
