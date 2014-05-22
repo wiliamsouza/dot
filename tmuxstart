@@ -11,7 +11,7 @@ tmux select-pane -t devel -U
 
 tmux new-window -t waa:2 -n source -c ~/source
 tmux new-window -t waa:3 -n ssh
-tmux new-window -t waa:4 -n log -c /var/log 
-tmux new-window -t waa:5 -n bash 
+tmux new-window -t waa:4 -n log -c /var/log
+tmux new-window -t waa:5 -n bash
 tmux select-window -t waa:1
 tmux attach-session -t waa
