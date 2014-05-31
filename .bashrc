@@ -8,8 +8,10 @@ if [ -d "$HOME/.local/bin" ] ; then
     PATH="$HOME/.local/bin:$PATH"
 fi
 
-# Editor
+# Bash
+PROMPT_DIRTRIM=1
 EDITOR='vim'
+unset PROMPT_COMMAND
 
 # powerline
 ##. $HOME/.local/lib/python2.7/site-packages/powerline/bindings/bash/powerline.sh
@@ -61,9 +63,6 @@ PATH=$GOPATH/bin:$PATH
 
 # eclipse
 PATH=$HOME/bin/eclipse:$PATH
-
-# Bash
-PROMPT_DIRTRIM=1
 
 # PYENV
 PYENV_ROOT=$HOME/.pyenv
