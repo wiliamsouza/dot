@@ -24,10 +24,10 @@ WORKON_HOME=$HOME/.virtualenvs
 # pip install virtualenvwrapper
 #source /usr/local/bin/virtualenvwrapper.sh
 # apt-get install virtualenvwrapper
-#source /usr/share/virtualenvwrapper/virtualenvwrapper.sh
+source /usr/share/virtualenvwrapper/virtualenvwrapper.sh
 
 # Android
-ANDROID_HOME=$HOME/bin/android-sdk-linux
+ANDROID_HOME=$HOME/.local/bin/android-sdk-linux
 PATH=$ANDROID_HOME/platform-tools:$PATH
 PATH=$ANDROID_HOME/tools:$PATH
 
@@ -39,16 +39,16 @@ PYTHONSTARTUP=$HOME/.pythonrc.py
 JAVA_HOME=/usr/lib/jvm/jdk1.8.0_05
 
 # Maven
-M2_HOME=$HOME/bin/apache-maven
+M2_HOME=$HOME/.local/bin/apache-maven
 M2=$M2_HOME/bin
 PATH=$M2:$PATH
 
 # Gradle
-GRADLE_HOME=$HOME/bin/gradle
+GRADLE_HOME=$HOME/.local/bin/gradle
 PATH=$GRADLE_HOME/bin:$PATH
 
 # Ant
-ANT_HOME=$HOME/bin/apache-ant
+ANT_HOME=$HOME/.local/bin/apache-ant
 PATH=$ANT_HOME/bin:$PATH
 
 # ccache
@@ -62,7 +62,7 @@ PATH=$GOROOT/bin:$PATH
 PATH=$GOPATH/bin:$PATH
 
 # eclipse
-PATH=$HOME/bin/eclipse:$PATH
+PATH=$HOME/.local/bin/eclipse:$PATH
 
 # PYENV
 PYENV_ROOT=$HOME/.pyenv
@@ -75,14 +75,14 @@ PATH=$RBENV_ROOT/bin:$PATH
 eval "$(rbenv init -)"
 
 # Nodejs
-PATH=$HOME/bin/node/bin:$PATH
+PATH=$HOME/.local/bin/node/bin:$PATH
 
 # Plan9port
 ##PLAN9=$HOME/source/plan9
 ##PATH=$PLAN9/bin:$PATH
 
 # Github atom-shell
-PATH=$HOME/bin/atom-shell:$PATH
+PATH=$HOME/.local/bin/atom-shell:$PATH
 
 export M2
 export M2_HOME
