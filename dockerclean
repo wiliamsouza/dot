@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# Remove containers
+echo 'Removing containers'
+for container in $(docker ps -a | awk '{print $1}'); do
+    docker rm $container;
+done
+
+echo 'Removing unused images'
+# Remove images
+for container in $(docker images -a | grep '<none>' | awk '{print $3}'); do
+    docker rmi $container;
+done
