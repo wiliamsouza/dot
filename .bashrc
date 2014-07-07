@@ -19,6 +19,8 @@ unset PROMPT_COMMAND
 #Virtualenv
 PROJECT_HOME=$HOME/devel
 WORKON_HOME=$HOME/.virtualenvs
+VIRTUALENVWRAPPER_PYTHON=/usr/bin/python
+VIRTUALENVWRAPPER_VIRTUALENV=/usr/bin/virtualenv
 # pip install --user virtualenvwrapper
 #source $HOME/.local/bin/virtualenvwrapper.sh
 # pip install virtualenvwrapper
@@ -103,3 +105,5 @@ export RBENV_ROOT
 export PLAN9
 export PATH
 export EDITOR
+export VIRTUALENVWRAPPER_PYTHON
+export VIRTUALENVWRAPPER_VIRTUALENV
