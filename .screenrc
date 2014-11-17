@@ -1,3 +1,6 @@
+#term screen
+term screen-256color
+
 hardstatus alwayslastline "%{wK} %?%-Lw%?%{kw}%n%f %t%{wK}%?%+Lw %=%M/%d %c"
 bindkey ^[. prev
 bindkey ^[; next
@@ -5,9 +8,7 @@ bindkey ^[; next
 
 startup_message off
 
-#setenv TERM=screen
-
 screen -t root
 screen -t devel
-screen -t source 
+screen -t source
 screen -t

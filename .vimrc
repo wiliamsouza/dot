@@ -3,6 +3,10 @@ execute pathogen#infect()
 syntax on
 filetype plugin indent on
 
+syntax enable
+set background=dark
+colorscheme solarized
+
 " Disable arrow	keys
 "noremap  <Up> ""
 "noremap! <Up> <Esc>
@@ -62,7 +66,7 @@ set expandtab
 " jedi-vim: Do not starts the completion if you type dot.
 let g:jedi#popup_on_dot = 0
 
-" Use F8/Shift-F8 to add/remove a breakpoint (ipdb.set_trace)
+" Use F7/Shift-F7 to add/remove a breakpoint (pdb.set_trace)
 " Totally cool.
 python << EOF
 import vim

@@ -1,3 +1,5 @@
+# Wiliam's configuration
+
 # set PATH so it includes user's private bin if it exists
 if [ -d "$HOME/bin" ] ; then
     PATH="$HOME/bin:$PATH"
@@ -14,7 +16,7 @@ EDITOR='vim'
 unset PROMPT_COMMAND
 
 # powerline
-##. $HOME/.local/lib/python2.7/site-packages/powerline/bindings/bash/powerline.sh
+. $HOME/.local/lib/python2.7/site-packages/powerline/bindings/bash/powerline.sh
 
 #Virtualenv
 PROJECT_HOME=$HOME/devel
