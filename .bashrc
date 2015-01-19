@@ -38,6 +38,9 @@ source /usr/share/virtualenvwrapper/virtualenvwrapper.sh
 #PATH=$ANDROID_HOME/platform-tools:$PATH
 #PATH=$ANDROID_HOME/tools:$PATH
 
+# Android studio
+PATH=$HOME/.local/android-studio/bin:$PATH
+
 # Python
 PYTHONSTARTUP=$HOME/.pythonrc.py
 
