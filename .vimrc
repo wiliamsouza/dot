@@ -5,6 +5,7 @@ filetype plugin indent on
 
 syntax enable
 set background=dark
+"set background=light
 colorscheme solarized
 
 " Disable arrow	keys
@@ -66,7 +67,7 @@ set expandtab
 " jedi-vim: Do not starts the completion if you type dot.
 let g:jedi#popup_on_dot = 0
 
-" Use F7/Shift-F7 to add/remove a breakpoint (pdb.set_trace)
+" Use F8/Shift-F8 to add/remove a breakpoint (pdb.set_trace)
 " Totally cool.
 python << EOF
 import vim
@@ -78,15 +79,8 @@ def SetBreakpoint():
     strWhite = re.search( '^(\s*)', strLine).group(1)
 
     vim.current.buffer.append(
-       "%(space)sipdb.set_trace()  %(mark)s Breakpoint" %
+       "%(space)simport ipdb; ipdb.set_trace()  %(mark)s Breakpoint" %
          {'space':strWhite, 'mark': '#'}, nLine - 1)
-
-    for strLine in vim.current.buffer:
-        if strLine == "import ipdb":
-            break
-    else:
-        vim.current.buffer.append( 'import ipdb', 0)
-        vim.command( 'normal j1')
 
 vim.command( 'map <f8> :py SetBreakpoint()<cr>')
 
@@ -98,7 +92,7 @@ def RemoveBreakpoints():
     nLines = []
     nLine = 1
     for strLine in vim.current.buffer:
-        if strLine == "import ipdb" or strLine.lstrip()[:16] == "ipdb.set_trace()":
+        if strLine == "import ipdb;ipdb.set_trace()":
             nLines.append( nLine)
         nLine += 1
 
@@ -112,5 +106,5 @@ def RemoveBreakpoints():
 
     vim.command( "normal %dG" % nCurrentLine)
 
-vim.command( "map <s-f8> :py RemoveBreakpoints()<cr>")
+vim.command( 'map <s-f8> :py RemoveBreakpoints()<cr>')
 EOF
