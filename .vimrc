@@ -18,6 +18,11 @@ colorscheme solarized
 "noremap  <Right> ""
 "noremap! <Right> <Esc>
 
+" NERDTree
+autocmd StdinReadPre * let s:std_in=1
+autocmd vimenter * if !argc() | NERDTree ~/devel | endif
+map <C-n> :NERDTreeToggle<CR>
+
 " vim-flake8
 autocmd BufWritePost *.py call Flake8()
 
@@ -58,7 +63,6 @@ let python_highlight_all = 1
 
 " Smart indenting
 set smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class
-
 set smartindent
 set tabstop=4
 set shiftwidth=4
@@ -66,6 +70,8 @@ set expandtab
 
 " jedi-vim: Do not starts the completion if you type dot.
 let g:jedi#popup_on_dot = 0
+" Displays function call signatures in insert mode on command line.
+let g:jedi#show_call_signatures = "2"
 
 " Use F8/Shift-F8 to add/remove a breakpoint (pdb.set_trace)
 " Totally cool.
