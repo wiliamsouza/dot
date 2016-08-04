@@ -16,22 +16,16 @@ EDITOR='vim'
 unset PROMPT_COMMAND
 
 # powerline
-#. $HOME/.local/lib/python2.7/site-packages/powerline/bindings/bash/powerline.sh
+#. $HOME/home/wiliam/.pyenv/versions/3.5.2/lib/python3.5/site-packages/powerline/bindings/bash/powerline.sh
 
 #Virtualenv
 PROJECT_HOME=$HOME/devel
 WORKON_HOME=$HOME/.virtualenvs
-VIRTUALENVWRAPPER_PYTHON=/usr/bin/python
-VIRTUALENVWRAPPER_VIRTUALENV=/usr/bin/virtualenv
-
-# pip install --user virtualenvwrapper
-#source $HOME/.local/bin/virtualenvwrapper.sh
+VIRTUALENVWRAPPER_PYTHON=$HOME/.pyenv/versions/3.5.2/bin/python
+VIRTUALENVWRAPPER_VIRTUALENV=$HOME/.pyenv/versions/3.5.2/bin/virtualenv
 
 # pip install virtualenvwrapper
-#source /usr/local/bin/virtualenvwrapper.sh
-
-# apt-get install virtualenvwrapper
-source /usr/share/virtualenvwrapper/virtualenvwrapper.sh
+source $HOME/.pyenv/versions/3.5.2/bin/virtualenvwrapper.sh
 
 # Android
 #ANDROID_HOME=$HOME/.local/android-sdk-linux
@@ -80,9 +74,7 @@ eval "$(pyenv init -)"
 RBENV_ROOT=$HOME/.rbenv
 PATH=$RBENV_ROOT/bin:$PATH
 eval "$(rbenv init -)"
-
-# RBENV Bin
-PATH=$HOME/.rbenv/versions/2.1.2/bin/:$PATH
+PATH=$HOME/.rbenv/versions/2.3.1/bin/:$PATH
 
 # Nodejs
 PATH=$HOME/.local/node/bin:$PATH
