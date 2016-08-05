@@ -43,9 +43,9 @@ map <C-n> :NERDTreeToggle<CR>
 autocmd BufWritePost *.py call Flake8()
 
 " powerline
-python from powerline.vim import setup as powerline_setup
-python powerline_setup()
-python del powerline_setup
+"python3 from powerline.vim import setup as powerline_setup
+"python3 powerline_setup()
+"python3 del powerline_setup
 set laststatus=2
 
 " Enable Golang plugins
@@ -91,7 +91,7 @@ let g:jedi#show_call_signatures = "2"
 
 " Use F8/Shift-F8 to add/remove a breakpoint (pdb.set_trace)
 " Totally cool.
-python << EOF
+python3 << EOF
 import vim
 def SetBreakpoint():
     import re
