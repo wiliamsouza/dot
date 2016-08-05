@@ -16,7 +16,7 @@ EDITOR='vim'
 unset PROMPT_COMMAND
 
 # powerline
-#. $HOME/home/wiliam/.pyenv/versions/3.5.2/lib/python3.5/site-packages/powerline/bindings/bash/powerline.sh
+#. $HOME/.pyenv/versions/3.5.2/lib/python3.5/site-packages/powerline/bindings/bash/powerline.sh
 
 #Virtualenv
 PROJECT_HOME=$HOME/devel
