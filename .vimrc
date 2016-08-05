@@ -1,11 +1,27 @@
-" Vim pathogen
-execute pathogen#infect()
-syntax on
+set nocompatible
+filetype off
+
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+Plugin 'VundleVim/Vundle.vim'
+Plugin 'tpope/vim-fugitive'
+Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'davidhalter/jedi-vim'
+Plugin 'scrooloose/nerdtree'
+Plugin 'honza/dockerfile.vim'
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'nvie/vim-flake8'
+Plugin 'plasticboy/vim-markdown'
+Plugin 'tpope/vim-surround'
+
+call vundle#end()
 filetype plugin indent on
 
+syntax on
 syntax enable
+
 set background=dark
-"set background=light
 colorscheme solarized
 
 " Disable arrow	keys
