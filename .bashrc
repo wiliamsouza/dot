@@ -16,16 +16,16 @@ EDITOR='vim'
 unset PROMPT_COMMAND
 
 # powerline
-#. $HOME/.pyenv/versions/3.5.2/lib/python3.5/site-packages/powerline/bindings/bash/powerline.sh
+#. $HOME/.pyenv/versions/3.6.0/lib/python3.6/site-packages/powerline/bindings/bash/powerline.sh
 
 #Virtualenv
 PROJECT_HOME=$HOME/devel
 WORKON_HOME=$HOME/.virtualenvs
-VIRTUALENVWRAPPER_PYTHON=$HOME/.pyenv/versions/3.5.2/bin/python
-VIRTUALENVWRAPPER_VIRTUALENV=$HOME/.pyenv/versions/3.5.2/bin/virtualenv
+VIRTUALENVWRAPPER_PYTHON=$HOME/.pyenv/versions/3.6.0/bin/python
+VIRTUALENVWRAPPER_VIRTUALENV=$HOME/.pyenv/versions/3.6.0/bin/virtualenv
 
 # pip install virtualenvwrapper
-source $HOME/.pyenv/versions/3.5.2/bin/virtualenvwrapper.sh
+source $HOME/.pyenv/versions/3.6.0/bin/virtualenvwrapper.sh
 
 # Android
 #ANDROID_HOME=$HOME/.local/android-sdk-linux
@@ -39,8 +39,7 @@ PATH=$HOME/.local/android-studio/bin:$PATH
 PYTHONSTARTUP=$HOME/.pythonrc.py
 
 # Java
-#JAVA_HOME=/usr/lib/jvm/jdk1.6.0_55
-JAVA_HOME=/usr/lib/jvm/jdk1.8.0_25
+JAVA_HOME=/usr/lib/jvm/jdk1.8.0_111
 
 # Maven
 M2_HOME=$HOME/.local/apache-maven
@@ -74,7 +73,7 @@ eval "$(pyenv init -)"
 RBENV_ROOT=$HOME/.rbenv
 PATH=$RBENV_ROOT/bin:$PATH
 eval "$(rbenv init -)"
-PATH=$HOME/.rbenv/versions/2.3.1/bin/:$PATH
+PATH=$HOME/.rbenv/versions/2.4.0/bin/:$PATH
 
 # Nodejs
 PATH=$HOME/.local/node/bin:$PATH
@@ -99,3 +98,11 @@ export PATH
 export EDITOR
 export VIRTUALENVWRAPPER_PYTHON
 export VIRTUALENVWRAPPER_VIRTUALENV
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
+export HEROKU_ORGANIZATION=olist
+
+export PATH="/home/wiliam/kubernetes/client/bin:$PATH"
+
+export PATH="/home/wiliam/.local/protoc/bin::$PATH"
