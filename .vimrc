@@ -14,6 +14,8 @@ Plugin 'altercation/vim-colors-solarized'
 Plugin 'nvie/vim-flake8'
 Plugin 'plasticboy/vim-markdown'
 Plugin 'tpope/vim-surround'
+Plugin 'fatih/vim-go'
+"Plugin 'python-mode/python-mode'
 
 call vundle#end()
 filetype plugin indent on
@@ -21,8 +23,9 @@ filetype plugin indent on
 syntax on
 syntax enable
 
+
 set background=dark
-colorscheme solarized
+colorscheme monokai
 
 " Disable arrow	keys
 "noremap  <Up> ""
@@ -43,26 +46,22 @@ map <C-n> :NERDTreeToggle<CR>
 autocmd BufWritePost *.py call Flake8()
 
 " powerline
-"python3 from powerline.vim import setup as powerline_setup
-"python3 powerline_setup()
-"python3 del powerline_setup
+python3 from powerline.vim import setup as powerline_setup
+python3 powerline_setup()
+python3 del powerline_setup
 set laststatus=2
 
-" Enable Golang plugins
-" Some Linux distributions set filetype in /etc/vimrc.
-" Clear filetype flags before changing runtimepath to force Vim to reload them.
-filetype off
-filetype plugin indent off
-set runtimepath+=$GOROOT/misc/vim
-filetype plugin indent on
-syntax on
+" Golang
+" Enable syntax-highlighting for Functions, Methods and Structs
+let g:go_highlight_functions = 1
+let g:go_highlight_methods = 1
+let g:go_highlight_fields = 1
+let g:go_highlight_types = 1
+let g:go_highlight_operators = 1
+let g:go_highlight_build_constraints = 1
 
-" Enable go fmt
-autocmd FileType go autocmd BufWritePre <buffer> Fmt
-
-" Enable golint
-set rtp+=$GOPATH/src/github.com/golang/lint/misc/vim
-autocmd BufWritePost,FileWritePost *.go execute 'Lint' | cwindow
+"Enable goimports to automatically insert import paths instead of gofmt
+let g:go_fmt_command = "goimports"
 
 " Disable markdown folding
 let g:vim_markdown_folding_disabled=1
@@ -104,7 +103,7 @@ def SetBreakpoint():
        "%(space)simport ipdb; ipdb.set_trace()  %(mark)s Breakpoint" %
          {'space':strWhite, 'mark': '#'}, nLine - 1)
 
-vim.command( 'map <f8> :py SetBreakpoint()<cr>')
+vim.command('map <f8> :py SetBreakpoint()<cr>')
 
 def RemoveBreakpoints():
     import re
@@ -128,5 +127,5 @@ def RemoveBreakpoints():
 
     vim.command( "normal %dG" % nCurrentLine)
 
-vim.command( 'map <s-f8> :py RemoveBreakpoints()<cr>')
+vim.command('map <s-f8> :py RemoveBreakpoints()<cr>')
 EOF
