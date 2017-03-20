@@ -15,6 +15,7 @@ Plugin 'nvie/vim-flake8'
 Plugin 'plasticboy/vim-markdown'
 Plugin 'tpope/vim-surround'
 Plugin 'fatih/vim-go'
+Plugin 'mileszs/ack.vim'
 "Plugin 'python-mode/python-mode'
 
 call vundle#end()
@@ -23,6 +24,10 @@ filetype plugin indent on
 syntax on
 syntax enable
 
+" https://github.com/mileszs/ack.vim#can-i-use-ag-the-silver-searcher-with-this
+if executable('ag')
+      let g:ackprg = 'ag --vimgrep'
+endif
 
 set background=dark
 colorscheme monokai
@@ -82,11 +87,20 @@ set smartindent
 set tabstop=4
 set shiftwidth=4
 set expandtab
+" visual autocomplete for command menu
+set wildmenu
+" redraw only when we need to.
+set lazyredraw
 
 " jedi-vim: Do not starts the completion if you type dot.
 let g:jedi#popup_on_dot = 0
 " Displays function call signatures in insert mode on command line.
 let g:jedi#show_call_signatures = "2"
+
+" CtrlP settings
+let g:ctrlp_match_window = 'bottom,order:ttb'
+let g:ctrlp_working_path_mode = 0
+let g:ctrlp_user_command = 'ag %s -l --nocolor --hidden -g ""'
 
 " Use F8/Shift-F8 to add/remove a breakpoint (pdb.set_trace)
 " Totally cool.
