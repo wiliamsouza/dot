@@ -108,38 +108,38 @@ python3 << EOF
 import vim
 def SetBreakpoint():
     import re
-    nLine = int( vim.eval( 'line(".")'))
+    nLine = int(vim.eval('line(".")'))
 
     strLine = vim.current.line
-    strWhite = re.search( '^(\s*)', strLine).group(1)
+    strWhite = re.search('^(\s*)', strLine).group(1)
 
     vim.current.buffer.append(
        "%(space)simport ipdb; ipdb.set_trace()  %(mark)s Breakpoint" %
          {'space':strWhite, 'mark': '#'}, nLine - 1)
 
-vim.command('map <f8> :py SetBreakpoint()<cr>')
+vim.command('map <f8> :py3 SetBreakpoint()<cr>')
 
 def RemoveBreakpoints():
     import re
 
-    nCurrentLine = int( vim.eval( 'line(".")'))
+    nCurrentLine = int(vim.eval( 'line(".")'))
 
     nLines = []
     nLine = 1
     for strLine in vim.current.buffer:
         if strLine == "import ipdb;ipdb.set_trace()":
-            nLines.append( nLine)
+            nLines.append(nLine)
         nLine += 1
 
     nLines.reverse()
 
     for nLine in nLines:
-        vim.command( "normal %dG" % nLine)
-        vim.command( "normal dd")
+        vim.command("normal %dG" % nLine)
+        vim.command("normal dd")
         if nLine < nCurrentLine:
             nCurrentLine -= 1
 
-    vim.command( "normal %dG" % nCurrentLine)
+    vim.command("normal %dG" % nCurrentLine)
 
-vim.command('map <s-f8> :py RemoveBreakpoints()<cr>')
+vim.command('map <s-f8> :py3 RemoveBreakpoints()<cr>')
 EOF
