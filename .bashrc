@@ -23,11 +23,11 @@ unset PROMPT_COMMAND
 #Virtualenv
 PROJECT_HOME=$HOME/Development
 WORKON_HOME=$HOME/.virtualenvs
-VIRTUALENVWRAPPER_PYTHON=$HOME/.pyenv/versions/3.7.3/bin/python
-VIRTUALENVWRAPPER_VIRTUALENV=$HOME/.pyenv/versions/3.7.3/bin/virtualenv
+VIRTUALENVWRAPPER_PYTHON=$HOME/.pyenv/versions/3.8.1/bin/python
+VIRTUALENVWRAPPER_VIRTUALENV=$HOME/.pyenv/versions/3.8.1/bin/virtualenv
 
 # pip install virtualenvwrapper
-source $HOME/.pyenv/versions/3.7.3/bin/virtualenvwrapper.sh
+source $HOME/.pyenv/versions/3.8.1/bin/virtualenvwrapper.sh
 
 # Python
 PYTHONSTARTUP=$HOME/.pythonrc.py
