@@ -12,7 +12,9 @@ fi
 
 # Bash
 PROMPT_DIRTRIM=1
-EDITOR='vim'
+EDITOR='nvim'
+alias vi="nvim -p"
+alias vim="nvim -p"
 unset PROMPT_COMMAND
 
 # powerline
