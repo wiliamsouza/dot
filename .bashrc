@@ -39,7 +39,7 @@ PATH=$GOROOT/bin:$PATH
 PATH=$GOPATH/bin:$PATH
 
 # Java
-JAVA_HOME=/usr/lib/jvm/jdk1.8.0_111
+JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64
 
 # PYENV
 PYENV_ROOT=$HOME/.pyenv
@@ -51,6 +51,20 @@ RBENV_ROOT=$HOME/.rbenv
 PATH=$RBENV_ROOT/bin:$PATH
 eval "$(rbenv init -)"
 PATH=$HOME/.rbenv/versions/2.4.0/bin/:$PATH
+
+#Flutter
+PATH=$HOME/.local/flutter/bin/:$PATH
+
+# Android
+ANDROID_HOME=$HOME/Android/Sdk
+PATH=$ANDROID_HOME/platform-tools:$PATH
+PATH=$ANDROID_HOME/tools:$PATH
+PATH=$ANDROID_HOME/tools/bin:$PATH
+
+# Android studio
+PATH=$HOME/.local/android-studio/bin:$PATH
+
+export XDG_CURRENT_DESKTOP=GNOME
 
 export PYTHONPATH
 export PYTHONSTARTUP
@@ -66,3 +80,10 @@ export PATH
 export EDITOR
 export VIRTUALENVWRAPPER_PYTHON
 export VIRTUALENVWRAPPER_VIRTUALENV
+
+walset() {
+    wal -n -i "$@"
+    feh --bg-scale "$(< "${HOME}/.cache/wal/wal")"
+}
+(cat ~/.cache/wal/sequences &)
+clear
