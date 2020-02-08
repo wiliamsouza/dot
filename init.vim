@@ -46,6 +46,9 @@ Plug 'Shougo/deoplete.nvim', {'do':':UpdateRemotePlugins'}
 Plug 'tpope/vim-rhubarb' " required by fugitive to :Gbrowse
 Plug 'sebdah/vim-delve'
 Plug 'sbdchd/neoformat'
+Plug 'neomake/neomake'
+Plug 'dylanaraps/wal.vim'
+Plug 'stsewd/isort.nvim', { 'do': ':UpdateRemotePlugins' }
 
 if isdirectory('/usr/local/opt/fzf')
   Plug '/usr/local/opt/fzf' | Plug 'junegunn/fzf.vim'
@@ -68,7 +71,10 @@ Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 
 "" Color
-Plug 'tomasr/molokai'
+"Plug 'tomasr/molokai'
+
+" Original monokai background color
+"let g:molokai_original = 1
 
 "*****************************************************************************
 "" Custom bundles
@@ -196,7 +202,7 @@ set ruler
 set number
 
 let no_buffers_menu=1
-silent! colorscheme molokai
+silent! colorscheme wal
 
 set mousemodel=popup
 set t_Co=256
@@ -572,7 +578,7 @@ augroup END
 " vim-python
 augroup vimrc-python
   autocmd!
-  autocmd FileType python setlocal expandtab shiftwidth=4 tabstop=8 colorcolumn=79
+  autocmd FileType python setlocal expandtab shiftwidth=4 tabstop=8
       \ formatoptions+=croq softtabstop=4
       \ cinwords=if,elif,else,for,while,try,except,finally,def,class,with
 augroup END
@@ -590,7 +596,10 @@ let g:jedi#smart_auto_mappings = 0
 
 " ale
 :call extend(g:ale_linters, {
-    \'python': ['flake8'], })
+    \'python': ['pylint'], })
+let g:ale_lint_on_text_changed = 'never'
+let g:ale_lint_on_insert_leave = 0
+let g:ale_lint_on_enter = 0
 
 " vim-airline
 let g:airline#extensions#virtualenv#enabled = 1
