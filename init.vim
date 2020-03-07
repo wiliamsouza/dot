@@ -717,9 +717,12 @@ endif
 
 let g:deoplete#enable_at_startup = 1
 
-let g:neoformat_enabled_python = ['black']
-
 augroup fmt
   autocmd!
   autocmd BufWritePre * undojoin | Neoformat
 augroup END
+
+"augroup isort
+"  autocmd!
+"  autocmd BufWritePre *.py undojoin | Isort
+"augroup END
