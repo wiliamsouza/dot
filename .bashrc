@@ -92,3 +92,5 @@ walset() {
 }
 (cat ~/.cache/wal/sequences &)
 clear
+export PATH=/home/wiliam/.local/arduino-1.8.12:$PATH
+export PATH=$PATH:/usr/local/tinygo/bin
