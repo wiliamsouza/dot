@@ -575,6 +575,11 @@ augroup END
 
 
 " python
+
+let g:python_host_prog  = '/home/wiliam/.pyenv/versions/2.7.17/bin/python'
+let g:python3_host_prog = '/home/wiliam/.pyenv/versions/3.8.2/bin/python'
+let g:neoformat_enabled_python = ['black']
+
 " vim-python
 augroup vimrc-python
   autocmd!
