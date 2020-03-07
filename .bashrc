@@ -64,6 +64,11 @@ PATH=$ANDROID_HOME/tools/bin:$PATH
 # Android studio
 PATH=$HOME/.local/android-studio/bin:$PATH
 
+# ESP8266
+PATH=$HOME/.local/xtensa-lx106-elf/bin/:$PATH
+
+export IDF_PATH=$HOME/Development/ESP8266_RTOS_SDK
+
 export XDG_CURRENT_DESKTOP=GNOME
 
 export PYTHONPATH
