@@ -52,6 +52,13 @@ PATH=$RBENV_ROOT/bin:$PATH
 eval "$(rbenv init -)"
 PATH=$HOME/.rbenv/versions/2.4.0/bin/:$PATH
 
+# NODENV
+NODENV_ROOT=$HOME/.nodenv
+PATH=$NODENV_ROOT/bin:$PATH
+eval "$(nodenv init -)"
+PATH=$HOME/.nodenv/versions/14.0.0/bin/:$PATH
+
+
 #Flutter
 PATH=$HOME/.local/flutter/bin/:$PATH
 
