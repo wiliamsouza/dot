@@ -31,6 +31,7 @@ source $HOME/.pyenv/versions/3.8.2/bin/virtualenvwrapper.sh
 
 # Python
 PYTHONSTARTUP=$HOME/.pythonrc.py
+PYTHONBREAKPOINT=ipdb.set_trace
 
 # golang
 GOROOT=/usr/local/go
@@ -58,7 +59,6 @@ PATH=$NODENV_ROOT/bin:$PATH
 eval "$(nodenv init -)"
 PATH=$HOME/.nodenv/versions/14.0.0/bin/:$PATH
 
-
 #Flutter
 PATH=$HOME/.local/flutter/bin/:$PATH
 
@@ -74,12 +74,8 @@ PATH=$HOME/.local/android-studio/bin:$PATH
 # ESP8266
 PATH=$HOME/.local/xtensa-lx106-elf/bin/:$PATH
 
-export IDF_PATH=$HOME/Development/ESP8266_RTOS_SDK
-
-export XDG_CURRENT_DESKTOP=GNOME
-
-export PYTHONPATH
 export PYTHONSTARTUP
+export PYTHONBREAKPOINT
 export PROJECT_HOME
 export WORKON_HOME
 export JAVA_HOME
@@ -99,5 +95,8 @@ walset() {
 }
 (cat ~/.cache/wal/sequences &)
 clear
+
 export PATH=/home/wiliam/.local/arduino-1.8.12:$PATH
 export PATH=$PATH:/usr/local/tinygo/bin
+export IDF_PATH=$HOME/Development/ESP8266_RTOS_SDK
+export XDG_CURRENT_DESKTOP=GNOME
