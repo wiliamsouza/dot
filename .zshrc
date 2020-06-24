@@ -161,6 +161,10 @@ PATH=$HOME/.local/android-studio/bin:$PATH
 # ESP8266
 PATH=$HOME/.local/xtensa-lx106-elf/bin/:$PATH
 
+# Google cloud
+PROJECT_ID=
+CLUSTER_REGION=us-east1
+
 export PYTHONSTARTUP
 export PYTHONBREAKPOINT
 export PROJECT_HOME
@@ -175,6 +179,8 @@ export PATH
 export EDITOR
 export VIRTUALENVWRAPPER_PYTHON
 export VIRTUALENVWRAPPER_VIRTUALENV
+export PROJECT_ID
+export CLUSTER_REGION
 
 # walset() {
 #     wal -n -i "$@"
