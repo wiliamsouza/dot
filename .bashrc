@@ -100,3 +100,10 @@ export PATH=/home/wiliam/.local/arduino-1.8.12:$PATH
 export PATH=$PATH:/usr/local/tinygo/bin
 export IDF_PATH=$HOME/Development/ESP8266_RTOS_SDK
 export XDG_CURRENT_DESKTOP=GNOME
+
+# add Pulumi to the PATH
+export PATH=$PATH:$HOME/.pulumi/bin
+
+export PATH=$PATH:$HOME/.local/istio-1.6.0/bin
+
+export GITHUB_TOKEN=
