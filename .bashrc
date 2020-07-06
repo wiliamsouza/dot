@@ -76,7 +76,7 @@ PATH=$HOME/.local/xtensa-lx106-elf/bin/:$PATH
 LESS="-F -X $LESS"
 
 # Git
-GIT_PAGER=cat
+GIT_PAGER=/home/wiliam/.nodenv/versions/14.0.0/lib/node_modules/diff-so-fancy/diff-so-fancy | less --tabs=2 -RFX
 
 # Github
 export GITHUB_TOKEN=
