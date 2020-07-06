@@ -51,13 +51,11 @@ eval "$(pyenv init -)"
 RBENV_ROOT=$HOME/.rbenv
 PATH=$RBENV_ROOT/bin:$PATH
 eval "$(rbenv init -)"
-PATH=$HOME/.rbenv/versions/2.4.0/bin/:$PATH
 
 # NODENV
 NODENV_ROOT=$HOME/.nodenv
 PATH=$NODENV_ROOT/bin:$PATH
 eval "$(nodenv init -)"
-PATH=$HOME/.nodenv/versions/14.0.0/bin/:$PATH
 
 #Flutter
 PATH=$HOME/.local/flutter/bin/:$PATH
@@ -74,6 +72,19 @@ PATH=$HOME/.local/android-studio/bin:$PATH
 # ESP8266
 PATH=$HOME/.local/xtensa-lx106-elf/bin/:$PATH
 
+# Less
+LESS="-F -X $LESS"
+
+# Git
+GIT_PAGER=cat
+
+# Github
+export GITHUB_TOKEN=
+
+# Google cloud
+PROJECT_ID=
+CLUSTER_REGION=us-east1
+
 export PYTHONSTARTUP
 export PYTHONBREAKPOINT
 export PROJECT_HOME
@@ -88,6 +99,11 @@ export PATH
 export EDITOR
 export VIRTUALENVWRAPPER_PYTHON
 export VIRTUALENVWRAPPER_VIRTUALENV
+export LESS
+export GIT_PAGER
+export PROJECT_ID
+export CLUSTER_REGION
+export GITHUB_TOKEN
 
 walset() {
     wal -n -i "$@"
@@ -105,5 +121,3 @@ export XDG_CURRENT_DESKTOP=GNOME
 export PATH=$PATH:$HOME/.pulumi/bin
 
 export PATH=$PATH:$HOME/.local/istio-1.6.0/bin
-
-export GITHUB_TOKEN=

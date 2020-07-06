@@ -136,7 +136,6 @@ PATH=$RBENV_ROOT/bin:$PATH
 if command -v rbenv 1>/dev/null 2>&1; then
   eval "$(rbenv init -)"
 fi
-PATH=$HOME/.rbenv/versions/2.4.0/bin/:$PATH
 
 # NODENV
 NODENV_ROOT=$HOME/.nodenv
@@ -144,7 +143,6 @@ PATH=$NODENV_ROOT/bin:$PATH
 if command -v nodenv 1>/dev/null 2>&1; then
   eval "$(nodenv init -)"
 fi
-PATH=$HOME/.nodenv/versions/14.0.0/bin/:$PATH
 
 #Flutter
 PATH=$HOME/.local/flutter/bin/:$PATH
@@ -160,6 +158,15 @@ PATH=$HOME/.local/android-studio/bin:$PATH
 
 # ESP8266
 PATH=$HOME/.local/xtensa-lx106-elf/bin/:$PATH
+
+# Less
+LESS="-F -X $LESS"
+
+# Git
+GIT_PAGER=cat
+
+# Github
+export GITHUB_TOKEN=
 
 # Google cloud
 PROJECT_ID=
@@ -179,8 +186,11 @@ export PATH
 export EDITOR
 export VIRTUALENVWRAPPER_PYTHON
 export VIRTUALENVWRAPPER_VIRTUALENV
+export LESS
+export GIT_PAGER
 export PROJECT_ID
 export CLUSTER_REGION
+export GITHUB_TOKEN
 
 # walset() {
 #     wal -n -i "$@"
@@ -198,3 +208,7 @@ export CLUSTER_REGION
 # export PATH=$PATH:$HOME/.pulumi/bin
 # 
 # export PATH=$PATH:$HOME/.local/istio-1.6.0/bin
+#
+export GITHUB_TOKEN=
+export PROJECT_ID=
+export CLUSTER_REGION=us-east1
