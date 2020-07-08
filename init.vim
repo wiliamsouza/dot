@@ -49,7 +49,7 @@ Plug 'sbdchd/neoformat'
 Plug 'neomake/neomake'
 Plug 'dylanaraps/wal.vim'
 Plug 'stsewd/isort.nvim', { 'do': ':UpdateRemotePlugins' }
-Plug 'cloudhead/neovim-fuzzy'
+Plug 'ctrlpvim/ctrlp.vim'
 
 if isdirectory('/usr/local/opt/fzf')
   Plug '/usr/local/opt/fzf' | Plug 'junegunn/fzf.vim'
@@ -728,4 +728,6 @@ augroup END
 "  autocmd BufWritePre *.py undojoin | Isort
 "augroup END
 
-nnoremap <C-p> :FuzzyOpen<CR>
+let g:ctrlp_match_window = 'bottom,order:ttb'
+let g:ctrlp_working_path_mode = 0
+let g:ctrlp_user_command = 'ag %s -l --nocolor --hidden -g ""'
