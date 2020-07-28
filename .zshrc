@@ -168,7 +168,7 @@ export LESS="-F -X $LESS"
 GIT_PAGER="/home/wiliam/.nodenv/versions/14.0.0/lib/node_modules/diff-so-fancy/diff-so-fancy | less --tabs=2 -RFX"
 
 # Github
-export GITHUB_TOKEN=
+GITHUB_TOKEN=
  
 # Google cloud
 PROJECT_ID=
@@ -190,3 +190,6 @@ export VIRTUALENVWRAPPER_PYTHON
 export VIRTUALENVWRAPPER_VIRTUALENV
 export LESS
 export GIT_PAGER
+export GITHUB_TOKEN
+export PROJECT_ID
+export CLUSTER_REGION
