@@ -75,17 +75,24 @@ PATH=$HOME/.local/android-studio/bin:$PATH
 PATH=$HOME/.local/xtensa-lx106-elf/bin/:$PATH
 
 # Less
-LESS="-F -X $LESS"
+export LESS="-F -X $LESS"
 
 # Git
 GIT_PAGER=/home/wiliam/.nodenv/versions/14.0.0/lib/node_modules/diff-so-fancy/diff-so-fancy | less --tabs=2 -RFX
 
 # Github
-export GITHUB_TOKEN=
-
+GITHUB_TOKEN=
+ 
 # Google cloud
 PROJECT_ID=
 CLUSTER_REGION=us-east1
+
+walset() {
+    wal -n -i "$@"
+    feh --bg-scale "$(< "${HOME}/.cache/wal/wal")"
+}
+(cat ~/.cache/wal/sequences &)
+clear
 
 export PYTHONSTARTUP
 export PYTHONBREAKPOINT
@@ -103,23 +110,6 @@ export VIRTUALENVWRAPPER_PYTHON
 export VIRTUALENVWRAPPER_VIRTUALENV
 export LESS
 export GIT_PAGER
+export GITHUB_TOKEN
 export PROJECT_ID
 export CLUSTER_REGION
-export GITHUB_TOKEN
-
-walset() {
-    wal -n -i "$@"
-    feh --bg-scale "$(< "${HOME}/.cache/wal/wal")"
-}
-(cat ~/.cache/wal/sequences &)
-clear
-
-export PATH=/home/wiliam/.local/arduino-1.8.12:$PATH
-export PATH=$PATH:/usr/local/tinygo/bin
-export IDF_PATH=$HOME/Development/ESP8266_RTOS_SDK
-export XDG_CURRENT_DESKTOP=GNOME
-
-# add Pulumi to the PATH
-export PATH=$PATH:$HOME/.pulumi/bin
-
-export PATH=$PATH:$HOME/.local/istio-1.6.0/bin
