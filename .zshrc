@@ -68,7 +68,7 @@ ZSH_THEME="agnoster"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git docker golang python pyenv virtualenv) 
+plugins=(docker golang python pyenv virtualenv) 
 
 source $ZSH/oh-my-zsh.sh
 
@@ -101,7 +101,7 @@ alias vi="nvim -p"
 alias vim="nvim -p"
 
 # Python
-PYTHON_VERSION=3.8.3
+PYTHON_VERSION=3.8.5
 PYTHONSTARTUP=$HOME/.pythonrc.py
 PYTHONBREAKPOINT=ipdb.set_trace
 
@@ -136,6 +136,7 @@ PATH=$RBENV_ROOT/bin:$PATH
 if command -v rbenv 1>/dev/null 2>&1; then
   eval "$(rbenv init -)"
 fi
+PATH=$HOME/.rbenv/versions/2.4.0/bin/:$PATH
 
 # NODENV
 NODENV_ROOT=$HOME/.nodenv
@@ -143,6 +144,7 @@ PATH=$NODENV_ROOT/bin:$PATH
 if command -v nodenv 1>/dev/null 2>&1; then
   eval "$(nodenv init -)"
 fi
+PATH=$HOME/.nodenv/versions/14.0.0/bin/:$PATH
 
 #Flutter
 PATH=$HOME/.local/flutter/bin/:$PATH
@@ -160,14 +162,14 @@ PATH=$HOME/.local/android-studio/bin:$PATH
 PATH=$HOME/.local/xtensa-lx106-elf/bin/:$PATH
 
 # Less
-LESS="-F -X $LESS"
+export LESS="-F -X $LESS"
 
 # Git
-GIT_PAGER=/home/wiliam/.nodenv/versions/14.0.0/lib/node_modules/diff-so-fancy/diff-so-fancy | less --tabs=2 -RFX
+GIT_PAGER="/home/wiliam/.nodenv/versions/14.0.0/lib/node_modules/diff-so-fancy/diff-so-fancy | less --tabs=2 -RFX"
 
 # Github
 export GITHUB_TOKEN=
-
+ 
 # Google cloud
 PROJECT_ID=
 CLUSTER_REGION=us-east1
@@ -188,27 +190,3 @@ export VIRTUALENVWRAPPER_PYTHON
 export VIRTUALENVWRAPPER_VIRTUALENV
 export LESS
 export GIT_PAGER
-export PROJECT_ID
-export CLUSTER_REGION
-export GITHUB_TOKEN
-
-# walset() {
-#     wal -n -i "$@"
-#     feh --bg-scale "$(< "${HOME}/.cache/wal/wal")"
-# }
-# (cat ~/.cache/wal/sequences &)
-# clear
-# 
-# export PATH=/home/wiliam/.local/arduino-1.8.12:$PATH
-# export PATH=$PATH:/usr/local/tinygo/bin
-# export IDF_PATH=$HOME/Development/ESP8266_RTOS_SDK
-# export XDG_CURRENT_DESKTOP=GNOME
-# 
-# # add Pulumi to the PATH
-# export PATH=$PATH:$HOME/.pulumi/bin
-# 
-# export PATH=$PATH:$HOME/.local/istio-1.6.0/bin
-#
-export GITHUB_TOKEN=
-export PROJECT_ID=
-export CLUSTER_REGION=us-east1
