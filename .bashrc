@@ -23,11 +23,11 @@ unset PROMPT_COMMAND
 #Virtualenv
 PROJECT_HOME=$HOME/Development
 WORKON_HOME=$HOME/.virtualenvs
-VIRTUALENVWRAPPER_PYTHON=$HOME/.pyenv/versions/3.8.2/bin/python
-VIRTUALENVWRAPPER_VIRTUALENV=$HOME/.pyenv/versions/3.8.2/bin/virtualenv
+VIRTUALENVWRAPPER_PYTHON=$HOME/.pyenv/versions/3.8.5/bin/python
+VIRTUALENVWRAPPER_VIRTUALENV=$HOME/.pyenv/versions/3.8.5/bin/virtualenv
 
 # pip install virtualenvwrapper
-source $HOME/.pyenv/versions/3.8.2/bin/virtualenvwrapper.sh
+source $HOME/.pyenv/versions/3.8.5/bin/virtualenvwrapper.sh
 
 # Python
 PYTHONSTARTUP=$HOME/.pythonrc.py
@@ -51,11 +51,13 @@ eval "$(pyenv init -)"
 RBENV_ROOT=$HOME/.rbenv
 PATH=$RBENV_ROOT/bin:$PATH
 eval "$(rbenv init -)"
+PATH=$HOME/.rbenv/versions/2.4.0/bin/:$PATH
 
 # NODENV
 NODENV_ROOT=$HOME/.nodenv
 PATH=$NODENV_ROOT/bin:$PATH
 eval "$(nodenv init -)"
+PATH=$HOME/.nodenv/versions/14.0.0/bin:$PATH
 
 #Flutter
 PATH=$HOME/.local/flutter/bin/:$PATH
