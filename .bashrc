@@ -17,17 +17,21 @@ alias vi="nvim -p"
 alias vim="nvim -p"
 unset PROMPT_COMMAND
 
+PYTHON_VERSION=3.12.3
+RUBY_VERSION=3.3.1
+NODE_VERSION=22.1.0
+
 # powerline
-#. $HOME/.pyenv/versions/3.6.0/lib/python3.6/site-packages/powerline/bindings/bash/powerline.sh
+#. $HOME/.pyenv/versions/$PYTHON_VERSION/lib/python3.12/site-packages/powerline/bindings/bash/powerline.sh
 
 #Virtualenv
 PROJECT_HOME=$HOME/Development
 WORKON_HOME=$HOME/.virtualenvs
-VIRTUALENVWRAPPER_PYTHON=$HOME/.pyenv/versions/3.8.5/bin/python
-VIRTUALENVWRAPPER_VIRTUALENV=$HOME/.pyenv/versions/3.8.5/bin/virtualenv
+VIRTUALENVWRAPPER_PYTHON=$HOME/.pyenv/versions/$PYTHON_VERSION/bin/python
+VIRTUALENVWRAPPER_VIRTUALENV=$HOME/.pyenv/versions/$PYTHON_VERSION/bin/virtualenv
 
 # pip install virtualenvwrapper
-source $HOME/.pyenv/versions/3.8.5/bin/virtualenvwrapper.sh
+source $HOME/.pyenv/versions/$PYTHON_VERSION/bin/virtualenvwrapper.sh
 
 # Python
 PYTHONSTARTUP=$HOME/.pythonrc.py
@@ -40,7 +44,7 @@ PATH=$GOROOT/bin:$PATH
 PATH=$GOPATH/bin:$PATH
 
 # Java
-JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64
+##JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64
 
 # PYENV
 PYENV_ROOT=$HOME/.pyenv
@@ -51,13 +55,13 @@ eval "$(pyenv init -)"
 RBENV_ROOT=$HOME/.rbenv
 PATH=$RBENV_ROOT/bin:$PATH
 eval "$(rbenv init -)"
-PATH=$HOME/.rbenv/versions/2.4.0/bin/:$PATH
+PATH=$HOME/.rbenv/versions/$RUBY_VERSION/bin/:$PATH
 
 # NODENV
 NODENV_ROOT=$HOME/.nodenv
 PATH=$NODENV_ROOT/bin:$PATH
 eval "$(nodenv init -)"
-PATH=$HOME/.nodenv/versions/14.0.0/bin:$PATH
+PATH=$HOME/.nodenv/versions/$NODE_VERSION/bin:$PATH
 
 #Flutter
 PATH=$HOME/.local/flutter/bin/:$PATH
@@ -75,10 +79,10 @@ PATH=$HOME/.local/android-studio/bin:$PATH
 PATH=$HOME/.local/xtensa-lx106-elf/bin/:$PATH
 
 # Less
-export LESS="-F -X $LESS"
+LESS="-F -X $LESS"
 
 # Git
-GIT_PAGER=/home/wiliam/.nodenv/versions/14.0.0/lib/node_modules/diff-so-fancy/diff-so-fancy | less --tabs=2 -RFX
+GIT_PAGER="/home/wiliam/.nodenv/versions/$NODE_VERSION/lib/node_modules/diff-so-fancy/diff-so-fancy | less --tabs=2 -RFX"
 
 # Github
 GITHUB_TOKEN=
@@ -113,3 +117,6 @@ export GIT_PAGER
 export GITHUB_TOKEN
 export PROJECT_ID
 export CLUSTER_REGION
+export PYTHON_VERSION
+export RUBY_VERSION
+export NODE_VERSION
