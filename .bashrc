@@ -13,13 +13,15 @@ fi
 # Bash
 PROMPT_DIRTRIM=1
 EDITOR='nvim'
+alias darktable="flatpak run org.darktable.Darktable"
+alias nvim="FLATPAK_ENABLE_SDK_EXT=node20,golang flatpak run io.neovim.nvim"
 alias vi="nvim -p"
 alias vim="nvim -p"
 unset PROMPT_COMMAND
 
-PYTHON_VERSION=3.12.3
-RUBY_VERSION=3.3.1
-NODE_VERSION=22.1.0
+PYTHON_VERSION=3.12.4
+RUBY_VERSION=3.3.4
+NODE_VERSION=22.5.1
 
 # powerline
 #. $HOME/.pyenv/versions/$PYTHON_VERSION/lib/python3.12/site-packages/powerline/bindings/bash/powerline.sh
