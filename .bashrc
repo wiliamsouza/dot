@@ -11,10 +11,11 @@ if [ -d "$HOME/.local/bin" ] ; then
 fi
 
 # Bash
+NVIM_COMMAND="FLATPAK_ENABLE_SDK_EXT=node20,golang flatpak run io.neovim.nvim -p"
 PROMPT_DIRTRIM=1
-EDITOR='nvim'
+EDITOR=$NVIM_COMMAND
+alias nvim=$NVIM_COMMAND
 alias darktable="flatpak run org.darktable.Darktable"
-alias nvim="FLATPAK_ENABLE_SDK_EXT=node20,golang flatpak run io.neovim.nvim"
 alias vi="nvim -p"
 alias vim="nvim -p"
 unset PROMPT_COMMAND
