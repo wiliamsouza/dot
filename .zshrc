@@ -100,8 +100,12 @@ alias ohmyzsh="$EDITOR ~/.oh-my-zsh"
 alias vi="nvim -p"
 alias vim="nvim -p"
 
+# Languages
+PYTHON_VERSION=3.12.4
+RUBY_VERSION=3.3.4
+NODE_VERSION=22.5.1
+
 # Python
-PYTHON_VERSION=3.8.5
 PYTHONSTARTUP=$HOME/.pythonrc.py
 PYTHONBREAKPOINT=ipdb.set_trace
 
@@ -121,7 +125,7 @@ PATH=$GOROOT/bin:$PATH
 PATH=$GOPATH/bin:$PATH
 
 # Java
-JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64
+JAVA_HOME=
 
 # PYENV
 PYENV_ROOT=$HOME/.pyenv
@@ -144,7 +148,7 @@ PATH=$NODENV_ROOT/bin:$PATH
 if command -v nodenv 1>/dev/null 2>&1; then
   eval "$(nodenv init -)"
 fi
-PATH=$HOME/.nodenv/versions/14.0.0/bin/:$PATH
+PATH=$HOME/.nodenv/versions/$NODE_VERSION/bin:$PATH
 
 #Flutter
 PATH=$HOME/.local/flutter/bin/:$PATH
@@ -165,7 +169,7 @@ PATH=$HOME/.local/xtensa-lx106-elf/bin/:$PATH
 export LESS="-F -X $LESS"
 
 # Git
-GIT_PAGER="/home/wiliam/.nodenv/versions/14.0.0/lib/node_modules/diff-so-fancy/diff-so-fancy | less --tabs=2 -RFX"
+GIT_PAGER="$HOME/.nodenv/versions/$NODE_VERSION/lib/node_modules/diff-so-fancy/diff-so-fancy | less --tabs=2 -RFX"
 
 # Github
 GITHUB_TOKEN=

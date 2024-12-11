@@ -24,9 +24,6 @@ PYTHON_VERSION=3.12.4
 RUBY_VERSION=3.3.4
 NODE_VERSION=22.5.1
 
-# powerline
-#. $HOME/.pyenv/versions/$PYTHON_VERSION/lib/python3.12/site-packages/powerline/bindings/bash/powerline.sh
-
 #Virtualenv
 PROJECT_HOME=$HOME/Development
 WORKON_HOME=$HOME/.virtualenvs
@@ -47,7 +44,7 @@ PATH=$GOROOT/bin:$PATH
 PATH=$GOPATH/bin:$PATH
 
 # Java
-##JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64
+##JAVA_HOME=
 
 # PYENV
 PYENV_ROOT=$HOME/.pyenv
@@ -85,7 +82,7 @@ PATH=$HOME/.local/xtensa-lx106-elf/bin/:$PATH
 LESS="-F -X $LESS"
 
 # Git
-GIT_PAGER="/home/wiliam/.nodenv/versions/$NODE_VERSION/lib/node_modules/diff-so-fancy/diff-so-fancy | less --tabs=2 -RFX"
+GIT_PAGER="$HOME/.nodenv/versions/$NODE_VERSION/lib/node_modules/diff-so-fancy/diff-so-fancy | less --tabs=2 -RFX"
 
 # Github
 GITHUB_TOKEN=
