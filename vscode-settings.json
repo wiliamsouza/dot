@@ -1,0 +1,26 @@
+{
+    "editor.codeActionsOnSave": { "quickfix.biome": "explicit", "source.organizeImports.biome": "explicit" },
+    "editor.defaultFormatter": "biomejs.biome",
+    "dart.flutterSdkPath": "~/Development/flutter",
+    "editor.minimap.enabled": false,
+    "git.openRepositoryInParentFolders": "never",
+    "makefile.configureOnOpen": false,
+    "go.toolsManagement.autoUpdate": true,
+    "cmake.showOptionsMovedNotification": false,
+    "dart.openDevTools": "flutter",
+    "redhat.telemetry.enabled": false,
+    "workbench.colorTheme": "Solarized Light",
+    "explorer.confirmDragAndDrop": false,
+    "githubPullRequests.terminalLinksHandler": "github",
+    "blockman.n04ColorComboPreset": "Classic Light (Gradients)",
+    "editor.inlayHints.enabled": "off",
+    "workbench.colorCustomizations": {
+        "editor.lineHighlightBackground": "#34b90b2d",
+        "editor.lineHighlightBorder": "#9fced11f"
+    },
+    "editor.wordWrap": "off",
+    "diffEditor.wordWrap": "off",
+    "editor.guides.indentation": false,
+    "editor.guides.bracketPairs": false,
+    "editor.renderWhitespace": "trailing"
+}
